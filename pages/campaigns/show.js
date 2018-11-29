@@ -22,7 +22,7 @@ class CampaignShow extends Component {
 			address: props.query.address
 		};
 	}
-
+	// how to render
 	renderCards() {
 		const {
 			balance,
