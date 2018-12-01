@@ -1,7 +1,6 @@
 import Web3 from 'web3';
-import factory from './factory';
 
-import { INFURA_API, ETHERSCAN_API_KEY } from '../constant'
+import { INFURA_API, ETHERSCAN_API_KEY } from '../constant';
 
 // window is only available in the browser ... with Joia and server
 // side rendering in NEXT this is not doabel ... the belwo line of code is only
