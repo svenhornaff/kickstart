@@ -14,4 +14,4 @@ logs
 npm-debug.log*
 
 constant.js
-.next
+.next/
