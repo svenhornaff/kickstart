@@ -1,6 +1,8 @@
 import Web3 from 'web3';
 import factory from './factory';
 
+import { INFURA_API, ETHERSCAN_API_KEY } from '../constant'
+
 // window is only available in the browser ... with Joia and server
 // side rendering in NEXT this is not doabel ... the belwo line of code is only
 // working if the browser is already there e.g with create-react-app and Metamask
@@ -17,13 +19,11 @@ if (typeof window !== 'undefined' && typeof window.web3 !== 'undefined') {
 	console.log('Web3 initiaction using Metamask: '+window.web3.currentProvider);
 } else {
 	// we are on the server *OR* the user is not running Metamask
-	const provider = new Web3.providers.HttpProvider(
-		'https://rinkeby.infura.io/v3/2c1f7b3ba5444b85af407be223028de4'
-	);
+	const provider = new Web3.providers.HttpProvider(INFURA_API);
 	web3 = new Web3(provider);
 	console.log('Web3 initiaction using Infura: '+ provider);
 
-	web3Etherscan = require('etherscan-api').init('YourApiKey','rinkeby', '3000');
+	web3Etherscan = require('etherscan-api').init(ETHERSCAN_API_KEY,'rinkeby', '3000');
 	console.log(web3Etherscan);
 
 	getCurrentAccount();

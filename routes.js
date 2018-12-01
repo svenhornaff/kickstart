@@ -6,7 +6,6 @@ routes
 	.add('/campaigns/:address', '/campaigns/show')
 	.add('/campaigns/:address/requests', '/campaigns/requests/index')
 	.add('/campaigns/:address/details', '/campaigns/details')
-	.add('/campaigns/:address/details/tx', '/campaigns/details/tx')
 	.add('/campaigns/:address/requests/new', '/campaigns/requests/new');
 
 module.exports = routes;

@@ -3,10 +3,10 @@ const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
 const compiledFactory = require('./build/CampaignFactory.json');
 
-const provider = new HDWalletProvider(
-	'predict come wasp market vehicle antenna donate board bid chief desk alien',
-	'https://rinkeby.infura.io/v3/2c1f7b3ba5444b85af407be223028de4'
-);
+const {METAMASK, INFURA_API} = require('../constant');
+
+
+const provider = new HDWalletProvider(METAMASK, INFURA_API);
 const web3 = new Web3(provider);
 
 const deploy = async () => {
